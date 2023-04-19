@@ -5,6 +5,9 @@
   "description": "Nest TypeScript starter repository",
   "license": "MIT",
   "scripts": {
+    "module": "nest g module",
+    "service": "nest g service",
+    "controller": "nest g controller",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
