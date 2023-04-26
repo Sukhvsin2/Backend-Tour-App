@@ -1,12 +1,24 @@
-import { Prop, Schema } from "@nestjs/mongoose";
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { IsOptional } from "class-validator";
 
 @Schema()
 export class Location{
     @Prop({required: true})
     name: string;
 
+    @Prop({required: true, default: Date.now().toString()})
+    @IsOptional()
+    createdAt: string;
+
+    @Prop({required: true, default: Date.now().toString()})
+    @IsOptional()
+    updatedAt: string;
+
+    @Prop()
+    description: string;
+
     @Prop({})
-    coordinations: string;
-
-
+    imagePath: string;
 }
+
+export const locationSchema = SchemaFactory.createForClass(Location);

@@ -15,8 +15,8 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt'){
         });        
     }
 
-    async validate(payload: {sub: string, email: string}){
-        const user = await this.userModel.findOne({_id: payload.sub})
+    async validate(payload: {id: string, email: string}){
+        const user = await this.userModel.findOne({_id: payload.id})
         delete user.hash;
         return user;
     }

@@ -1,0 +1,7 @@
+April 24th 2023
+    - Build a Location Model
+    - Add Cover image field in the Location Model
+        - Libraries Required
+            * install -D @types/multer : to upload files on server
+            * install file-type uuid : to check files type and create uid so names won't clash.
+            
