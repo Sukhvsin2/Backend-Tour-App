@@ -18,6 +18,7 @@ export class Location{
     description: string;
 
     @Prop({})
+    @IsOptional()
     imagePath: string;
 }
 
